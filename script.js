@@ -46,7 +46,11 @@ const newExpense = {
 
 function expenseAdd(newExpense) {
   try {
-   // throw new Error("Erro de teste") // sempre importante testar se o fluxo esta funcionando
+   // Cria o elemento de li para adionar o item na lista.
+   const expenseItem = document.createElement("li")
+   expenseItem.classList.add("expensse")
+
+
 
   } catch (error) {
     alert("Não foi possivel atualizar a lista de despesas.")
