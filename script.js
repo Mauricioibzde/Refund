@@ -2,6 +2,8 @@ const form = document.querySelector("form")
 const amount = document.querySelector("#amount")
 const expense = document.querySelector("#expense")
 const category = document.querySelector("#category")
+// seleciona os elementos da lista
+const expenseList = document.querySelector("ul")
 //Capturando o evento de input para formatar o valor
 amount.oninput = () => { 
     // obtem o valor do input e remove os carcters nao numericos
@@ -49,7 +51,15 @@ function expenseAdd(newExpense) {
    // Cria o elemento de li para adionar o item na lista.
    const expenseItem = document.createElement("li")
    expenseItem.classList.add("expensse")
+  //Cria o icone da categoria
+  const expenseIcon = document.createElement("img")
+  expenseIcon.setAttribute("src",`img/${newExpense.category_id}.svg`)
+  expenseIcon.setAttribute("alt", newExpense.category_name)
 
+  //Adiciona as informacoes no item.
+  expenseItem.append(expenseIcon)
+  //Adiciona o item na lista
+  expenseList.appendChild(expenseItem)
 
 
   } catch (error) {
