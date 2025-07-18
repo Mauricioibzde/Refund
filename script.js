@@ -35,8 +35,25 @@ const newExpense = {
   category_name: category.options[category.selectedIndex].text,
   amount: amount.value,
   created_at: new Date(),
+
 }
-console.log(newExpense)
+ expenseAdd(newExpense)
+ 
+
+}
+
+
+
+function expenseAdd(newExpense) {
+  try {
+   // throw new Error("Erro de teste") // sempre importante testar se o fluxo esta funcionando
+
+  } catch (error) {
+    alert("Não foi possivel atualizar a lista de despesas.")
+    console.log(error)
+  }
+  
+  
 }
 
 
